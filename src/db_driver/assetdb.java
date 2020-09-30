@@ -17,6 +17,7 @@ public class assetdb {
 			tempconnection.close();
 			return true;
 		} catch (Exception e) {
+			e.printStackTrace();
 			return false;
 		}
 	}
@@ -83,10 +84,5 @@ public class assetdb {
 		} catch (final Exception e) {
 			e.printStackTrace();
 		}
-	}
-
-	public void close_db() throws SQLException {
-		this.sqlresultset.close();
-		this.sqlstatement.close();
 	}
 }
